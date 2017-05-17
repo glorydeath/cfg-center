@@ -1,0 +1,21 @@
+#test yaml, you can modify it as you wish
+envName: test
+
+test:
+    items: ["1", "2", "3"]
+    item2: [ {"fld1" : "val1"} , {"fld2" : "val2"} ]
+
+
+test2:
+    items: ["1", "2", "3"]
+    item2: [ {"fld1" : "val1"} , {"fld2" : "val2"} ]
+
+
+task-manager:
+    serverPort: 9876
+    dbURL: "jdbc:mariadb://localhost:3306/TM"
+    dbUser: root
+    dbPassword: "$#%$@%$#@"
+    minPoolSize: 2
+    maxPoolSize: 10
+    acquireIncrement: 1
