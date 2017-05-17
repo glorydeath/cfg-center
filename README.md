@@ -98,31 +98,4 @@ task-manager:
 所以获取配置就是要访问如下URL:
 `http://cfg-center:port/conf/{环境}/{模块}/{yaml中的key}`
 
-SDK调用(todo)
------
-除了RESTful API调用,也将会提供Java、Python的SDK。
-
-Feature如下:
-* 程序启动时通过args参数传入环境信息和cfg-center地址,如:`-env=bank -cfgcenter=cfg.4paradigm.com`
-* 允许使用本地`-debugconf=xxx.yaml`override配置中心配置, **仅供研发自测使用,线上部署会删除所有本地配置**
-* 模块名在初始化配置管理实例时传入,例如:`Conf conf = new Conf("dummyWorkder");`
-* 配置获取API示例:`getInt("maxPoolSize")`, `getString("dbPassword")`
-
-
-CLI调用(todo)
------
-提供命令行工具查询配置,方便开发和部署。
-
-Feature如下:
-* 支持tab推导
-* 支持维护`/etc/hosts`文件,方便部署(详细feature待补充)
-
-打包调用方式(todo)
-------
-所有环境相关的配置,包括但不限于下述,都会存储在配置git repo中,并由cfg-center提供实时读取服务:
-* 私有部署的hosts信息
-* DB连接串、密码
-* Hadoop、Spark地址
-
-后续会有自动化工具,根据配置生成各种部署包。
 
